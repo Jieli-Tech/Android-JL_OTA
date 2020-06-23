@@ -1,0 +1,10 @@
+com.jieli.jl_bt_ota.constant
+com.jieli.jl_bt_ota.impl
+com.jieli.jl_bt_ota.interfaces
+com.jieli.jl_bt_ota.model
+com.jieli.jl_bt_ota.model.base
+com.jieli.jl_bt_ota.model.command
+com.jieli.jl_bt_ota.model.parameter
+com.jieli.jl_bt_ota.model.response
+com.jieli.jl_bt_ota.tool
+com.jieli.jl_bt_ota.util
