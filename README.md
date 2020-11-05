@@ -48,6 +48,8 @@ The bluetooth OTA for Android
    bluetoothOption.isNeedChangeMtu = false
    //是否启用杰理服务器(暂时不支持)
    bluetoothOption.isUseJLServer = false
+   //是否需要调整BLE的MTU大小(默认不调整MTU，如果需要调整，请配合mtu属性设置)
+   bluetoothOption.isNeedChangeMtu = false
    //配置OTA参数
    configure(bluetoothOption)
 ```
