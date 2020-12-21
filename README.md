@@ -62,3 +62,11 @@ The bluetooth OTA for Android
   * Log保存位置：
     * 如果手机系统是Android 10.0+，放到./Android/data/com.jieli.otasdk/files/com.jieli.otasdk/logcat/
     * 如果手机系统是Android 10.0以下，放到/com.jieli.otasdk/logcat/
+    
+## 版本渠道说明
+
+1. Debug版本默认开启打印，可以选择测试配置。
+  * 是否启用设备认证(默认开启)
+  * 是否HID设备(默认关闭，回连方式有变化，因为HID设备系统会主动回连)
+  *  是否自定义回连方式(默认关闭，如需要自定义回连方式，需要客户自行实现)
+2. Release版本默认关闭打印，不显示测试配置。
