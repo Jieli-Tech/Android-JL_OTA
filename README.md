@@ -8,24 +8,22 @@ The bluetooth OTA for Android
   code -- 演示程序源码<br>
   doc -- 开发文档<br>
   libs -- 核心库<br>
-  
-  
+
+
 ## 使用说明
 1. 打开APP(初次打开应用，需要授予对应权限)
 2. 拷贝升级文件到手机固定的存放位置<br>
-  * 如果手机系统是Android 10.0+，放到./Android/data/com.jieli.otasdk/files/com.jieli.otasdk/upgrade/<br>
+  * 如果手机系统是Android 10.0+，放到/Android/data/com.jieli.otasdk/files/com.jieli.otasdk/upgrade/<br>
   * 如果手机系统是Android 10.0以下，放到/com.jieli.otasdk/upgrade/
 3. 连接升级目标设备
 4. 选择目标的升级文件，开始OTA升级
 
 ## 升级方式说明
-1. 客户可以选择基于jl_bluetooth_rcsp的SDK开发，参考com.jieli.otasdk/tool/jl_ota/。<strong style="color:#D80000">不建议使用，已弃更。</strong>
-2. 客户可以选择基于jl_bt_ota的SDK开发，参考com.jieli.otasdk/tool/other_sdk_ota/。<strong style="color:#D80000">建议使用</strong>
+2. 客户可以选择基于jl_bt_ota的SDK开发，参考com.jieli.otasdk/tool/ota/。
 
 
 | 库名 | 优势  | 劣势 | 备注 |
 | --- | --- | --- | --- |
-| jl_bluetooth_rcsp | 1.有完整的连接流程和OTA流程<br>2.接入简单  | 1.连接流程固定，不方便改动 <br>2.不方便接入其他协议通讯 | 不建议使用 |
 | jl_bt_ota | 1.固化OTA流程，不参与连接流程，方便客户改动<br> 2.不影响客户原因协议，可以部分功能接入 | 1. 需要客户实现连接流程和数据透传等接口 <br> 2. 接入相对复杂 | 建议使用 |
 
 
