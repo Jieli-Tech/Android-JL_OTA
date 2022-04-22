@@ -81,7 +81,7 @@ The bluetooth OTA for Android
 
 ​	**PC端操作：**PC端支持拖拽文件和打开文件浏览器选择
 
-![](doc\局域网传输演示.gif)
+![局域网文件传输](doc/局域网传输演示.gif)
 
 ## OTA自动测试说明
 
