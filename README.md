@@ -1,9 +1,17 @@
 # Android-JL_OTA
 The bluetooth OTA for Android
 
-概述
-------------
- ## 压缩包文件结构说明
+## 快速开始
+
+为了帮助开发者快速接入杰理OTA方案，请开发前详细阅读SDK开发文档: [杰理OTA外接库开发文档(Android)](https://doc.zh-jieli.com/Apps/Android/ota/zh-cn/master/index.html)。
+
+
+## 接入答疑
+
+针对开发者反馈的常见问题进行统一答疑，开发者遇到问题时，可以先参考 [接入答疑](https://gitee.com/Jieli-Tech/Android-JL_OTA/wikis/%E6%9D%B0%E7%90%86OTA%E5%BA%93%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E7%AD%94%E7%96%91)。<br/>
+如果还是无法解决问题，请提交issue，我们将尽快回复。
+
+## 压缩包文件结构说明
   apk -- 测试APK<br>
   code -- 演示程序源码<br>
   doc -- 开发文档<br>
@@ -58,7 +66,7 @@ The bluetooth OTA for Android
 2. 保存LOG到本地 前提是Log已打开，并调用JL_Log.setIsSaveLogFile(boolean bl)设置
   * 若开启保存，退出应用前记得关闭保存Log文件
   * Log保存位置：
-    * 如果手机系统是Android 10.0+，放到./Android/data/com.jieli.otasdk/files/com.jieli.otasdk/logcat/
+    * 如果手机系统是Android 10.0+，放到/Android/data/com.jieli.otasdk/files/com.jieli.otasdk/logcat/
     * 如果手机系统是Android 10.0以下，放到/com.jieli.otasdk/logcat/
     
 ## 版本渠道说明
@@ -79,7 +87,7 @@ The bluetooth OTA for Android
 
 ​	**App端操作**：勾选发送文件，点击选中即可发送出去。默认打开浏览文件夹是upgrade文件夹。若发送Log文件，需要返回上一级，进入logcat文件夹。
 
-​	**PC端操作：**PC端支持拖拽文件和打开文件浏览器选择
+​	**PC端操作：** PC端支持拖拽文件和打开文件浏览器选择
 
 ![局域网文件传输](doc/局域网传输演示.gif)
 
@@ -93,4 +101,8 @@ The bluetooth OTA for Android
 
 3.在设备升级界面，选择升级文件。
 
-4.点击【设备升级】按钮，开始自动化测试。####设备重启到再发现设备，可能会导致两次升级之间的时间间隔较长，但是不会影响自动测试继续，属于正常现象。
+4.点击【设备升级】按钮，开始自动化测试。
+
+```text
+设备重启到再发现设备，可能会导致两次升级之间的时间间隔较长，但是不会影响自动测试继续，属于正常现象。
+```
