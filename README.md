@@ -6,23 +6,33 @@ The bluetooth OTA for Android
 为了帮助开发者快速接入杰理OTA方案，请开发前详细阅读SDK开发文档: [杰理OTA外接库开发文档(Android)](https://doc.zh-jieli.com/Apps/Android/ota/zh-cn/master/index.html)。
 
 
+
 ## 接入答疑
 
-针对开发者反馈的常见问题进行统一答疑，开发者遇到问题时，可以先参考 [接入答疑](https://gitee.com/Jieli-Tech/Android-JL_OTA/wikis/%E6%9D%B0%E7%90%86OTA%E5%BA%93%20%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E7%AD%94%E7%96%91)。<br/>
+针对开发者反馈的常见问题进行统一答疑，开发者遇到问题时，可以先参考 [常见问题答疑](https://doc.zh-jieli.com/Apps/Android/ota/zh-cn/master/other/qa.html)。<br/>
 如果还是无法解决问题，请提交issue，我们将尽快回复。
 
+
+
 ## 压缩包文件结构说明
-  apk -- 测试APK<br>
-  code -- 演示程序源码<br>
-  doc -- 开发文档<br>
-  libs -- 核心库<br>
+
+```tex
+apk  ---  测试APK文件夹
+ ├── 测试APK
+code ---  参考源码工程文件夹
+ ├── 参考Demo源码工程
+doc ---  开发文档文件夹
+ ├── ReadMe.txt    ---  在线文档说明
+libs --- 核心库文件夹
+ └── jl_bt_ota_V1.9.0-release          --- 杰理OTA相关
+```
+
 
 
 ## 使用说明
+
 1. 打开APP(初次打开应用，需要授予对应权限)
-2. 拷贝升级文件到手机固定的存放位置<br>
-  * 如果手机系统是Android 10.0+，放到/Android/data/com.jieli.otasdk/files/com.jieli.otasdk/upgrade/<br>
-  * 如果手机系统是Android 10.0以下，放到/com.jieli.otasdk/upgrade/
+2. 拷贝升级文件到手机固定的存放位置 `手机根目录/Android/data/com.jieli.otasdk/files/upgrade/`<br>
 3. 连接升级目标设备
 4. 选择目标的升级文件，开始OTA升级
 
@@ -36,6 +46,8 @@ The bluetooth OTA for Android
 
 
 **设备通讯方式：** 默认是<strong style="color:#00008D">BLE</strong>，可选<strong style="color:#00008D">SPP</strong>，需要**固件**支持。
+
+
 
 ## OTA升级参数说明
 
@@ -60,49 +72,59 @@ The bluetooth OTA for Android
    configure(bluetoothOption)
 ```
 
+
+
 ## Logcat开关说明
 
-1. 开关LOG 可以使用JL_Log.setIsLog(boolean bl)设置
-2. 保存LOG到本地 前提是Log已打开，并调用JL_Log.setIsSaveLogFile(boolean bl)设置
-  * 若开启保存，退出应用前记得关闭保存Log文件
-  * Log保存位置：
-    * 如果手机系统是Android 10.0+，放到/Android/data/com.jieli.otasdk/files/com.jieli.otasdk/logcat/
-    * 如果手机系统是Android 10.0以下，放到/com.jieli.otasdk/logcat/
+1. 代码设置
+
+   ```java
+   //log配置
+   //islog      --- 是否输出打印，建议是开发时打开，发布时关闭
+   JL_Log.setIsLog(BuildConfig.DEBUG);
+   //log文件配置
+   //context    --- 上下文，建议是getApplicationContext()
+   //isSaveFile --- 是否保存log文件，建议是开发时打开，发布时关闭
+   JL_Log.setIsSaveLogFile(context, BuildConfig.DEBUG);
+   ```
+
+​		**注意事项**
+
+		1.  建议在Application中设置打印输出
+		1.  debug版本默认开启打印, release版本默认关闭打印
+		1.  客户可以在demo工程配置是否开启debug调试
+
+
+
+2. 打印文件
+
+  * 打印文件格式: ota_log_app_[timestamp].txt
+
+    * timestamp: 时间戳
+
+    ```tex
+    例如: ota_log_app_20220330093020.432.txt ==> OTA外接库打印文件, 创建时间: 2022/03/30 09:30:20
+    ```
+
     
-## 版本渠道说明
+  * Log文件保存位置：`手机根目录/Android/data/[包名]/files/logcat/`
 
-1. Debug版本默认开启打印，可以选择测试配置。
-  * 是否启用设备认证(默认开启)
-  * 是否HID设备(默认关闭，回连方式有变化，因为HID设备系统会主动回连)
-  *  是否自定义回连方式(默认关闭，如需要自定义回连方式，需要客户自行实现)
-2. Release版本默认关闭打印，不显示测试配置。
+    * 包名: 应用包名， 比如: `com.jieli.otasdk`
 
-## 局域网文件传输说明
+    ```tex
+    举例: Android/data/com.jieli.otasdk/files/logcat/
+    ```
 
-为方便测试，特意增加了局域网传输工具。方便传输 OTA升级文件和Log文件
 
-1.在您本地WiFi网络中的任何其他设备上打开[Snapdrop.net](https://snapdrop.net/)网站或其它Snapdrop应用程序。
 
-2.轻按您想要与之共享文件的设备，
+## 异常处理步骤
 
-​	**App端操作**：勾选发送文件，点击选中即可发送出去。默认打开浏览文件夹是upgrade文件夹。若发送Log文件，需要返回上一级，进入logcat文件夹。
+前提： 出现异常情况后, 退出APP
 
-​	**PC端操作：** PC端支持拖拽文件和打开文件浏览器选择
+1. **简单描述问题现象 (必要)**
 
-![局域网文件传输](doc/局域网传输演示.gif)
+2. **提供最接近时间戳的log文件 (必要)**
 
-## OTA自动测试说明
+3. 简要描述发生异常现象的时间段
 
-为方便连续测试，特意增加了自动化测试OTA功能。**默认测试次数：10**，**错误一次立即停止**。
-
-1.在测试设置界面，勾选自动化测试OTA选项，点击右上方保存按钮保存设置。
-
-2.在发现界面，选择要升级的设备。
-
-3.在设备升级界面，选择升级文件。
-
-4.点击【设备升级】按钮，开始自动化测试。
-
-```text
-设备重启到再发现设备，可能会导致两次升级之间的时间间隔较长，但是不会影响自动测试继续，属于正常现象。
-```
+4. 提供现象的截图或者视频
