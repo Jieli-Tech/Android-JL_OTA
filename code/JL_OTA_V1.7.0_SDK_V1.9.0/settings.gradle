@@ -1,8 +1,0 @@
-//include ':otasdk_java'
-//include ':jl_bt_ota_modify'
-//include ':jl_bt_ota'
-include ':otasdk'
-
-//路径改成jl_bt_ota的本地路径
-//project(":jl_bt_ota").projectDir = new File("D:\\android_program\\BluetoothProgram\\Develop\\BluetoothSDK\\trunk\\jl_bt_ota")
-include ':jl_file_transfer'

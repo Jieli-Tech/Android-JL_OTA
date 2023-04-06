@@ -22,9 +22,9 @@ apk  ---  测试APK文件夹
 code ---  参考源码工程文件夹
  ├── 参考Demo源码工程
 doc ---  开发文档文件夹
- ├── ReadMe.txt    ---  在线文档说明
+ ├── ReadMe.md    ---  在线文档说明
 libs --- 核心库文件夹
- └── jl_bt_ota_V1.9.0-release          --- 杰理OTA相关
+ └── jl_bt_ota_V1.9.2-release          --- 杰理OTA相关
 ```
 
 
@@ -90,9 +90,11 @@ libs --- 核心库文件夹
 
 ​		**注意事项**
 
-		1.  建议在Application中设置打印输出
-		1.  debug版本默认开启打印, release版本默认关闭打印
-		1.  客户可以在demo工程配置是否开启debug调试
+```tex
+	1.  建议在Application中设置打印输出
+	1.  debug版本默认开启打印, release版本默认关闭打印
+	1.  客户可以在demo工程配置是否开启debug调试
+```
 
 
 
@@ -106,7 +108,6 @@ libs --- 核心库文件夹
     例如: ota_log_app_20220330093020.432.txt ==> OTA外接库打印文件, 创建时间: 2022/03/30 09:30:20
     ```
 
-    
   * Log文件保存位置：`手机根目录/Android/data/[包名]/files/logcat/`
 
     * 包名: 应用包名， 比如: `com.jieli.otasdk`
@@ -119,7 +120,7 @@ libs --- 核心库文件夹
 
 ## 异常处理步骤
 
-前提： 出现异常情况后, 退出APP
+<strong style="color:#ee2233">前提： 出现异常情况后, 退出APP</strong>
 
 1. **简单描述问题现象 (必要)**
 

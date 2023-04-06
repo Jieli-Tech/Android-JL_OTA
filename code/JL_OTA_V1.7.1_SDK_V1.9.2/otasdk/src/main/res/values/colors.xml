@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#398BFF</color>
+
+
+    <color name="colorIcon">#398BFF</color>
+
+    <color name="background">#FFF5F5F5</color>
+    <color name="nav_item_unselected">#a1a1a1</color>
+    <color name="background_swipe_delete">#FF999999</color>
+    <color name="textColorSecondary">#727272</color>
+
+
+    <color name="item_selected_color">#E8E8E8</color>
+    <color name="rc_item_com_text">#434343</color>
+    <color name="rc_item_com_text_selected">#434343</color>
+    <color name="rc_decoration">#E8E8E8</color>
+    <color name="rc_device_decoration">#E8E8E8</color>
+    <color name="gray_484848">#484848</color>
+    <color name="white_F2F3F7">#F2F3F7</color>
+
+    <color name="text_black_000000">#000000</color>
+    <color name="bg_white">#ffffff</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_black">#494949</color>
+    <color name="text_press_gray">#a9a9a9</color>
+    <color name="gray_text_444444">#444444</color>
+    <color name="red_FF688C">#FF688C</color>
+    <color name="red_DE2233">#DE2233</color>
+    <color name="purple_A310C5">#A310C5</color>
+</resources>
