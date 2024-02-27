@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">杰理OTA升级</string>
+
+    <string name="company_name">珠海杰理科技股份有限公司</string>
+
+    <string name="copy_right">Copyright@2019www.zh-jieli.com All Rights Reserved</string>
+    <string name="scaning_tip">正在搜索设备&#8230;</string>
+    <string name="scan_tip">设备列表</string>
+    <string name="tab_upgrade">设备升级</string>
+    <string name="tab_scan">设备连接</string>
+    <string name="ble_filter">设备过滤条件</string>
+    <string name="device_keyword">设备名关键词</string>
+    <string name="sure">确定</string>
+    <string name="tips">提示</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+
+    <string name="device_status">设备状态:</string>
+    <string name="device_status_connected">已连接</string>
+    <string name="device_status_disconnected">未连接</string>
+    <string name="file_selection">文件选择</string>
+
+    <string name="bt_connecting">连接中&#8230;</string>
+    <string name="bt_connect_disconnected">连接已断开</string>
+    <string name="bt_connect_successed">连接成功</string>
+    <string name="bt_connect_failed">连接失败</string>
+    <string name="ota_please_chose_file">请选择升级文件</string>
+    <string name="ota_complete">升级完成</string>
+    <string name="ota_finish">升级结束</string>
+    <string name="ota_upgrading">正在升级</string>
+    <string name="ota_upgrade_cancel">升级已取消</string>
+    <string name="ota_upgrade_not_started">升级未开始</string>
+    <string name="bt_bluetooth_close">蓝牙已关闭</string>
+    <string name="ota_checking_upgrade_file">正在检验升级文件</string>
+    <string name="ota_upgrade_failed">升级失败: %s</string>
+    <string name="ota_check_file">校验文件中</string>
+    <string name="device_must_mandatory_upgrade">设备需要强制升级</string>
+    <string name="open_gpg_tip">应用需要GPS功能，请打开定位服务才可继续</string>
+    <string name="open_bluetooth_tip">应用需要蓝牙功能，请打开蓝牙才可继续</string>
+    <string name="grant_bluetooth_permission">应用需要蓝牙权限，请授予后才可继续</string>
+    <string name="grant_location_permission">应用需要定位权限，请授予后才可继续</string>
+    <string name="grant_external_storage_permission">应用需要存储权限，请授予后才可继续</string>
+
+    <!--MainActivity-->
+    <string name="double_tap_to_exit">再按一次点击退出应用</string>
+    <string name="upgrade">升级</string>
+    <string name="connect">连接</string>
+    <string name="setting">设置</string>
+    <string name="files">文件</string>
+    <string name="bt_not_connect_device">设备未连接</string>
+
+    <!--OtaFragment-->
+    <string name="device_name">设备名称:</string>
+    <string name="device_addr">设备地址:</string>
+    <string name="device_type">设备类型:</string>
+
+    <string name="device_type_unknown">未知类型</string>
+    <string name="device_type_classic">经典蓝牙</string>
+    <string name="device_type_ble">BLE设备</string>
+    <string name="device_type_dual_mode">双模蓝牙设备</string>
+    <string name="ota_progress">进度</string>
+
+    <string name="none_file_tips">请把升级文件[xxx.ufw 或者 xxx.bfu]放到手机存储位置。</string>
+    <string name="auto_test_ota">Auto OTA</string>
+    <string name="auto_test_ota_tip">正在自动化OTA测试，请先等待测试结束</string>
+
+
+    <!--SettingsActivity-->
+    <string name="save">保存</string>
+    <string name="test_settings">测试设置</string>
+    <string name="app_version">软件版本</string>
+    <string name="settings_success_and_restart">配置成功，即将退出应用</string>
+    <string name="device_auth_option">是否启用设备认证</string>
+    <string name="hid_device_option">是否HID设备</string>
+    <string name="use_custom_reconnect_way_option">是否自定义回连方式</string>
+    <string name="use_auto_test_ota_option">是否使用自动化测试OTA</string>
+
+    <string name="log_file_path">打印日志位置</string>
+    <string name="cur_communication_way">当前通讯方式</string>
+    <string name="communication_way_ble">BLE</string>
+    <string name="communication_way_spp">SPP</string>
+    <string name="adjust_ble_mtu">调整MTU</string>
+    <string name="use_spp_private_channel">是否使用SPP私有通道</string>
+    <string name="input_data_hint">输入发送数据</string>
+    <string name="input_spp_uuid">输入SPP的特殊UUID</string>
+    <string name="spp_uuid_error">输入UUID有误，请重新输入</string>
+    <string name="ready_to_send_data">准备发送数据</string>
+    <string name="send_spp_private_data">发送私有SPP数据</string>
+    <string name="config_none_change">配置没有改变</string>
+    <string name="snapdrop_trans_file">局域网传输文件</string>
+
+
+    <string name="err_no_browser">无法打开浏览器</string>
+    <string name="err_no_app">未找到用于打开此文件的应用</string>
+    <!-- Update -->
+    <string name="input_auto_test_count_err">请输入范围[%1$d, %2$d]的数值</string>
+    <!-- Welcome -->
+    <string name="app_welcome">欢迎使用 Snapdrop</string>
+    <string name="app_welcome_summary">1. 在您本地WiFi网络中的任何其他设备上打开 <a href="https://snapdrop.net">snapdrop.net</a> 或 Snapdrop app。\n2. 轻按您想要与之共享文件的设备。\n好了！文件将马上被共享…</string>
+    <!-- Download -->
+    <string name="download_save_pending">存储文件。请有点耐心…</string>
+    <string name="download_successful">下载成功</string>
+    <string name="notification_channel_name">下载完成</string>
+    <!-- Action Buttons -->
+    <string name="open">打开</string>
+    <!-- Settings / About -->
+    <!-- File sharing -->
+    <string name="intent_file">已选择一个要共享的文件</string>
+    <string name="intent_files">已选择多个要共享的文件</string>
+    <string name="intent_content">已选择要共享的内容</string>
+    <string name="error_filechooser">无法打开文件选择程序</string>
+    <string name="error_network">请确保您已经连接到WiFi网络</string>
+    <string name="ignore_error_network">忽略并继续</string>
+    <string name="pref_first_use">第一次使用SnapDrop</string>
+
+    <!--Auto Test-->
+    <string name="test_count">测试次数</string>
+    <string name="device_auth">设备认证</string>
+    <string name="hid_device">HID设备</string>
+    <string name="custom_reconnect">自定义回连方式</string>
+    <string name="auto_test">自动化测试OTA</string>
+    <string name="test_times">测试次数</string>
+    <string name="fault_tolerant">容错</string>
+    <string name="fault_tolerant_count">容错次数</string>
+    <string name="sdk_version">SDK版本号</string>
+    <string name="keep_bluetooth_and_net">（升级过程中，请保持蓝牙和网络打开状态）</string>
+    <!--文件传输-->
+    <string name="copy_toast">复制成功，请在连接设备的浏览器中打开</string>
+    <string name="read_file_failed">文件读取失败</string>
+    <string name="please_refresh_web">上传成功，请刷新网页端</string>
+    <string name="upload_failed">上传失败</string>
+    <string name="computer_transmission">电脑传输</string>
+    <string name="local_add">本地添加</string>
+    <string name="save_file">保存文件</string>
+    <string name="ufw_format_file_tips">请以xxx.ufw格式命名文件</string>
+    <string name="file_name_existed">该文件名已存在</string>
+    <string name="service_already_open">服务已开启</string>
+    <string name="keep_same_wifi">请确保连接设备在同一个Wi-Fi下，或连到此设备的热点上</string>
+    <string name="pack_up">收起</string>
+    <string name="copy_the_address">复制地址</string>
+    <string name="adjust_mtu">调整MTU</string>
+    <string name="current_communication_mode">当前通讯方式</string>
+    <string name="app_version_number">App版本号</string>
+    <string name="log_files">Log文件</string>
+    <string name="save_setting">保存设置，需重启App生效，确定重启？</string>
+    <string name="restart">重启</string>
+    <string name="save_setting_failed">保存设置失败</string>
+    <string name="ignore">忽略</string>
+    <string name="setting_no_save">设置未保存，是否要保存？</string>
+    <string name="enter_develop_mode_tip">进入开发者模式，请保存设置</string>
+    <string name="update_finish">升级完成</string>
+    <string name="ota_reason">原因：</string>
+    <string name="auto_test_reconnect">第%1$d次升级完成，正在回连设备...</string>
+    <string name="auto_test_fail_reconnect">第%1$d次升级失败，正在回连设备...</string>
+
+    <string name="automated_test_process">自动化测试进程</string>
+    <string name="end">结束</string>
+    <string name="update_failed">升级失败</string>
+    <string name="verification_file_completed">校验文件完成，正在回连设备...</string>
+    <string name="test_tasks">测试任务次数</string>
+    <string name="successful_tests">测试成功次数</string>
+    <string name="delete_all_log_files">是否删除所有Log文件？</string>
+    <string name="delete">删除</string>
+    <string name="auto_test_range">请在1到999范围内</string>
+    <string name="select_file">选择文件</string>
+    <string name="device_filter">设备过滤</string>
+    <string name="broadcast_box">广播音箱</string>
+    <string name="normal_mode">普通模式</string>
+    <string name="no_file_selected">未选择文件</string>
+    <string name="reconnecting">正在回连</string>
+    <string name="no_file_added">暂无文件</string>
+    <string name="add_files_first">请先添加文件</string>
+    <string name="need_mandatory_upgrade_no_auto_test">强制升级设备不允许进行自动化测试</string>
+    <string name="mandatory_upgrade_no_auto_test_recorvery">强制升级设备不允许进行自动化测试,正在将设备先恢复正常</string>
+    <string name="downloading_file">下载文件中</string>
+    <string name="scan_qrcode">扫一扫</string>
+    <string name="photos">相册</string>
+    <string name="qrcode_into_box">将二维码/条码放入框内</string>
+    <string name="fail_photos_system_reason">由于系统原因, 无法访问相册</string>
+    <string name="access_camera_reason">需要访问相机，用于扫描二维码进行下载资源</string>
+    <string name="access_photos_reason">需要访问相册，用于扫描二维码进行下载资源</string>
+    <string name="system_set_camera">此功能需要使用到你的相机,请前往系统设置权限</string>
+    <string name="system_set_external_storage">此功能需要使用到你的手机存储,请前往系统设置权限</string>
+    <string name="scan_download">扫码下载</string>
+    <string name="permission">权限</string>
+</resources>
