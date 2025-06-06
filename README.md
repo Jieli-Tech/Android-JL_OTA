@@ -14,36 +14,48 @@ The bluetooth OTA for Android
 
 
 
+## 更新内容
+
+1. 修复SPP 方式单备份 OTA 失败问题<br>
+2. 增加 Android 14 的兼容处理<br>
+3. 重构APP的UI框架
+
+
+
 ## 压缩包文件结构说明
 
 ```tex
-apk  ---  测试APK文件夹
- ├── 测试APK
-code ---  参考源码工程文件夹
+apk  --- 测试APK
+ ├── JLOTA_V1.8.0_10800-debug.apk
+code --- 演示程序源码
  ├── 参考Demo源码工程
-doc ---  开发文档文件夹
- ├── ReadMe.md    ---  在线文档说明
-libs --- 核心库文件夹
- └── jl_bt_ota_V1.9.2-release          --- 杰理OTA相关
+doc  --- 开发文档
+ ├── 杰理OTA外接库(Android)开发文档链接
+libs --- 核心库
+ └── jl_bt_ota_V1.10.0-release
 ```
 
 
 
 ## 使用说明
 
-1. 打开APP(初次打开应用，需要授予对应权限)
+1. 打开APP(初次打开应用，需要授予对应权限)<br>
+
 2. 拷贝升级文件到手机固定的存放位置 `手机根目录/Android/data/com.jieli.otasdk/files/upgrade/`<br>
-3. 连接升级目标设备
+
+3. 连接升级目标设备<br>
+
 4. 选择目标的升级文件，开始OTA升级
 
+   
+
 ## 升级方式说明
-2. 客户可以选择基于jl_bt_ota的SDK开发，参考com.jieli.otasdk/tool/ota/。
+1. 客户可以选择基于jl_bt_ota的SDK开发，参考 ``com.jieli.otasdk/tool/ota/``。
 
 
 | 库名 | 优势  | 劣势 | 备注 |
 | --- | --- | --- | --- |
-| jl_bt_ota | 1.固化OTA流程，不参与连接流程，方便客户改动<br> 2.不影响客户原因协议，可以部分功能接入 | 1. 需要客户实现连接流程和数据透传等接口 <br> 2. 接入相对复杂 | 建议使用 |
-
+| jl_bt_ota | 1. 固化OTA流程，不参与连接流程，方便客户改动<br> 2.不影响客户原因协议，可以部分功能接入 | 1. 需要客户实现连接流程和数据透传等接口 <br />2. 接入相对复杂 | 建议使用 |
 
 **设备通讯方式：** 默认是<strong style="color:#00008D">BLE</strong>，可选<strong style="color:#00008D">SPP</strong>，需要**固件**支持。
 
@@ -56,21 +68,25 @@ libs --- 核心库文件夹
    val bluetoothOption = BluetoothOTAConfigure()
    //选择通讯方式
    bluetoothOption.priority = BluetoothOTAConfigure.PREFER_BLE
-   //是否需要自定义回连方式(默认不需要，如需要自定义回连方式，需要客户自行实现)
+   //是否需要自定义回连方式(默认是false，使用库内回连机制，如需要自定义回连方式，设置为true, 由客户自行实现回连机制)
    bluetoothOption.isUseReconnect = !JL_Constant.NEED_CUSTOM_RECONNECT_WAY
    //是否启用设备认证流程(与固件工程师确认)
    bluetoothOption.isUseAuthDevice = JL_Constant.IS_NEED_DEVICE_AUTH
-   //设置BLE的MTU
+   //设置BLE的MTU(已过时，不建议使用)
    bluetoothOption.mtu = BluetoothConstant.BLE_MTU_MIN
-   //是否需要改变BLE的MTU
+   //是否需要改变BLE的MTU(已过时，不建议使用)
    bluetoothOption.isNeedChangeMtu = false
    //是否启用杰理服务器(暂时不支持)
    bluetoothOption.isUseJLServer = false
-   //是否需要调整BLE的MTU大小(默认不调整MTU，如果需要调整，请配合mtu属性设置)
-   bluetoothOption.isNeedChangeMtu = false
    //配置OTA参数
    configure(bluetoothOption)
 ```
+
+
+
+<strong style="color:#dd2233">注意事项</strong>
+
+1. 公版固件SDK默认是打开【**设备认证**】功能的
 
 
 

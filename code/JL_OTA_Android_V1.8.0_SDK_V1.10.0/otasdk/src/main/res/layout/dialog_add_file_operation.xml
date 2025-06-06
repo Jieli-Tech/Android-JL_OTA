@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="16dp">
+
+    <ImageView
+        android:id="@+id/iv_triangle"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="13dp"
+        android:src="@drawable/ic_black_trangle"
+        app:layout_constraintBottom_toTopOf="@id/cardView"
+        app:layout_constraintEnd_toEndOf="@+id/cardView"
+        tools:ignore="ContentDescription" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        app:cardCornerRadius="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:background="#4E4E4E">
+
+            <TextView
+                android:id="@+id/tv_upgrade_file_browse_local"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                android:text="@string/local_add"
+                android:textColor="@color/text_white"
+                app:drawableStartCompat="@drawable/icon_phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_upgrade_file_http_transfer"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                android:text="@string/computer_transmission"
+                android:textColor="@color/text_white"
+                app:drawableStartCompat="@drawable/icon_computer"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gray_line_1" />
+
+            <TextView
+                android:id="@+id/tv_scan_qr_code"
+                android:layout_width="0dp"
+                android:layout_height="44dp"
+                android:drawablePadding="8dp"
+                android:gravity="center_vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="0dp"
+                android:text="@string/scan_download"
+                android:textColor="@color/text_white"
+                android:visibility="visible"
+                app:drawableStartCompat="@drawable/ic_scan_download"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gray_line_2" />
+
+            <View
+                android:id="@+id/gray_line_2"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:background="#38ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_upgrade_file_http_transfer" />
+
+            <View
+                android:id="@+id/gray_line_1"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_marginStart="8dp"
+                android:background="#38ffffff"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_upgrade_file_browse_local" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
