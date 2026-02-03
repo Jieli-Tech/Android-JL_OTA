@@ -8,6 +8,7 @@ The bluetooth OTA for Android
 <br/>
 
 <div align="center">
+ 
 ![Android](https://img.shields.io/badge/Android-5.1+-blue.svg)
 ![Android Studio](https://img.shields.io/badge/Android_Studio-Latest-orange.svg)
 ![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)       
