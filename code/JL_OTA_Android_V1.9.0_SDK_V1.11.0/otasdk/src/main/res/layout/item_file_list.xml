@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="64dp">
+
+    <ImageView
+        android:id="@+id/iv_file_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_file"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/iv_item_file_select"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_blue_15_shape"
+        android:gravity="center"
+        android:textColor="@color/text_white"
+        android:textSize="@dimen/text_10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="1" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginStart="18dp"
+        android:background="#fff4f7fb"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+    <com.jieli.otasdk.ui.widget.FocusTextView
+        android:id="@+id/tv_file_path"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:singleLine="true"
+        android:textColor="#B0B0B0"
+        android:textSize="@dimen/text_12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/tv_item_file_name"
+        app:layout_constraintStart_toStartOf="@+id/tv_item_file_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_item_file_name"
+        tools:text="Android/data/files/logcatAndroid/data/files/logcatAndroid/data/files/logcat" />
+
+    <com.jieli.otasdk.ui.widget.FocusTextView
+        android:id="@+id/tv_item_file_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="2dp"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:gravity="center_vertical"
+        android:singleLine="true"
+        android:textColor="@color/black_242424"
+        android:textSize="@dimen/text_15sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/tv_file_path"
+        app:layout_constraintEnd_toStartOf="@+id/iv_item_file_select"
+        app:layout_constraintStart_toEndOf="@+id/iv_file_logo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:text="upgrade.ufw\t\t0.67Mb" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

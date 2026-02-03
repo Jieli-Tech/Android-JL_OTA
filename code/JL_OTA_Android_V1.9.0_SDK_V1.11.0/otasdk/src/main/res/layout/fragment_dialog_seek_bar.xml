@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:background="@color/black_242424"
+        tools:context=".ui.dialog.DialogSeekBar">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_dialog_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="36dp"
+                    android:textColor="@color/black_242424"
+                    android:textSize="@dimen/text_16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="调整MTU"
+                    tools:visibility="visible" />
+
+                <com.warkiz.widget.IndicatorStayLayout
+                    android:id="@+id/indicatorStayLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_dialog_title">
+
+                    <com.warkiz.widget.IndicatorSeekBar
+                        android:id="@+id/seek_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="32dp"
+                        app:isb_indicator_content_layout="@layout/custom_indicator_oval"
+                        app:isb_max="512"
+                        app:isb_min="23"
+                        app:isb_progress="300"
+                        app:isb_show_indicator="custom"
+                        app:isb_show_tick_marks_type="divider"
+                        app:isb_thumb_drawable="@drawable/icon_slider"
+                        app:isb_thumb_size="32dp"
+                        app:isb_tick_marks_drawable="@drawable/img_bg_box"
+                        app:isb_track_background_color="@color/gray_D8D8D8"
+                        app:isb_track_progress_color="@color/blue_398BFF" />
+
+                </com.warkiz.widget.IndicatorStayLayout>
+
+                <TextView
+                    android:id="@+id/tv_min"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginStart="24dp"
+                    android:textColor="@color/black_4B4B4B"
+                    android:textSize="12sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indicatorStayLayout"
+                    tools:text="23" />
+
+                <TextView
+                    android:id="@+id/tv_max"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:layout_marginEnd="24dp"
+                    android:textColor="@color/black_4B4B4B"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/indicatorStayLayout"
+                    tools:layout_editor_absoluteX="62dp"
+                    tools:text="512" />
+
+                <View
+                    android:id="@+id/view_horizontal_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#EFEFEF"
+                    android:layout_marginTop="13dp"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_min" />
+
+                <TextView
+                    android:id="@+id/btn_cancel"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:textColor="@color/black_242424"
+                    android:textSize="@dimen/text_15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toStartOf="@id/btn_confirm"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/view_horizontal_line"
+                    tools:text="@string/cancel"
+                    tools:visibility="visible" />
+
+                <TextView
+                    android:id="@+id/btn_confirm"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:gravity="center"
+                    android:textColor="@color/blue_398BFF"
+                    android:textSize="@dimen/text_15sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/btn_cancel"
+                    app:layout_constraintTop_toBottomOf="@+id/view_horizontal_line"
+                    tools:text="@string/confirm"
+                    tools:visibility="visible" />
+
+                <View
+                    android:id="@+id/view_line"
+                    android:layout_width="1dp"
+                    android:layout_height="0dp"
+                    android:background="@color/white_EFEFEF"
+                    android:visibility="gone"
+                    app:layout_constraintBottom_toBottomOf="@id/btn_confirm"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/view_horizontal_line"
+                    tools:visibility="visible" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
